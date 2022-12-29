@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title><%= gameTitle %> - Jak bardo będzie bolał portfel?</title>
+</head>
+<body>
+    <h3><a href="/">< Wróć do wyboru</a></h3>
+    <h1>Jak bardzo będzie bolał portfel od <%= gameTitle %>?</h1>
+    <h6 id="price"><%= price %></h6>
+    <div id="to">
+        <h1><%= gameCurrency %> => PLN</h1>
+
+        <div id="gameCounter">
+            <input id="gameInput" type="text">
+            <script>
+                gameInput.onkeyup = function() {
+                    var gameValue = this.value * price.textContent
+                    gameText.textContent = `<%= gameCurrencyShort %> ~ ${gameValue} PLN`
+                }
+            </script>
+        </div>
+        <h3 id="gameText"><%= gameCurrencyShort %> ~ 0 PLN</h3>
+    </div>
+
+    <div id="from">
+        <h1>PLN => <%= gameCurrency %></h1>
+
+        <div id="plnCounter">
+            <input id="plnInput" type="text">
+            <script>
+                plnInput.onkeyup = function() {
+                    var PLNvalue = this.value / price.textContent
+                    plnText.textContent = `PLN ~ ${PLNvalue} <%= gameCurrencyShort %>`
+                }
+            </script>
+        </div>
+        <h3 id="plnText">PLN ~ 0 <%= gameCurrencyShort %></h3>
+    </div>
+</body>
+</html>

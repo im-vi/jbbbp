@@ -1,0 +1,33 @@
+/* Hanken Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: darkgrey;
+}
+
+a{
+    font-size:15px;
+    text-decoration:none;
+    color:#1c37d3;
+}
+
+a:hover{
+    background-color:#1e9960;
+    transition-duration: 0.5s;
+    color: white;
+}
+
+#gameCounter{
+    float: left;
+    clear: both;
+}
+
+#plnCounter{
+    float: left;
+    clear: both;
+}
+
+h6{
+    font-size: 0%;
+}
